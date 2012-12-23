@@ -21,7 +21,7 @@ this little work everyone can edit it and uses it without offending others
 ```
 	Direction.js( 'className' );
 ```
-ثم أضف لكل وسم HTML تريد إصلاحه الصنف "class" الذي وضعته مكان className
 ‫ثم أضف لكل وسم HTML تريد إصلاحه الصنف "class" الذي وضعته مكان className
+
 
 ثم أبلغ عن الأاخطاء التي تراها في الملف
