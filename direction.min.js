@@ -1,0 +1,6 @@
+/**
+ * @projectDescription a small file that is used to fix the direction of HTML documents
+ * @author Ali Al Brrak alaa13212@gmail.com
+ * @version 0.1
+ */
+var Direction=[];Direction["js"]=function(e){function h(){var e=this;var t=e.innerText;var n=e.innerHTML;isRtl=s.test(t)?true:o.test(t)?false:null;if(isRtl===true){if(c!="rtl"||e.dir=="ltr"){e.style.direction="rtl"}n=n.replace(u,"$2$5‎$3$6");n=n.replace(f,"$1‏$2");e.innerHTML=n}else if(isRtl===false){if(c!="ltr"||e.dir=="rtl"){e.style.direction="ltr"}n=n.replace(a,"$2$5‏$3$6");n=n.replace(l,"$1‎$2");e.innerHTML=n}}var t="֑-߿יִ-﷽ﹰ-ﻼ";var n="A-Za-zÀ-ÖØ-öø-ʸ̀-֐ࠀ-῿Ⰰ-﬜﷾-﹯﻽-￿";var r="!#-&+-/*:;=?@^_~\\\\|";var i="\"'-)<>\\[\\]\\{\\}";var s=new RegExp("^[^"+n+"]*["+t+" ]","m");var o=new RegExp("^[^"+t+"]*["+n+" ]","m");var u=new RegExp("((["+n+" ]{2,}["+r+"]+)(["+i+" ]*["+t+"]))|((["+t+"]["+i+" ]*)(["+r+"]+["+n+" ]{2,}))","gm");var a=new RegExp("((["+t+" ]{2,}["+r+"]+)(["+i+" ]*["+n+"]))|((["+n+"]["+i+" ]*)(["+r+"]+["+t+" ]{2,}))","gm");var f=new RegExp("(["+n+" ]{2,}["+i+"]+)(["+n+" ]{2,})","gm");var l=new RegExp("(["+t+" ]{2,}["+i+"]+)(["+t+" ]{2,})","gm");var c=document.body.dir;var p=document.body.getElementsByClassName(e);var d=p.length;while(d--){h.call(p[d])}};
