@@ -17,7 +17,7 @@ this little work everyone can edit it and uses it without offending others
 		<script src="direction.js"></script>
 	</body>
 ```
-‫وبعده ضع كود JavaScrip التالي مع تغيير className للغسم الذي تريده
+‫وبعده ضع كود JavaScrip التالي مع تغيير className للاسم الذي تريده
 ```
 	Direction.js( 'className' );
 ```
