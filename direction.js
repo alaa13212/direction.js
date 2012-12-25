@@ -130,4 +130,3 @@ Direction['js'] = function (className) {
 		direction.call(dirEl[length]);
 	}
 };
-Direction.js()
