@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1024" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>DirectionAPI.js</title>
+
+		<meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+		<meta name="author" content="Bartek Szopka" />
+
+
+		<link href="css/impress-demo.css" rel="stylesheet" />
+
+		<link rel="shortcut icon" href="favicon.png" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	</head>
+	<body class="impress-not-supported" >
+		<div dir="rtl" class="fallback-message">
+			<p>
+				متصفحك <b>لا يدعم هذا العرض التقديمي</b> ستشاهد عرض بدائي بعض الشيء.
+			</p>
+			<p>
+				لأفضل عرض أستخدم آخر أصدار من <b>Chrome</b>, <b>Safari</b> أو <b>Firefox</b>.
+			</p>
+		</div>
+
+		<div id="impress">
+			<!--
+			rotate,scale
+			-->
+			<div id="bored" class="step" data-scale="2.2">
+				<h1>API<sup>beta</sup></h1>
+			</div>
+			<div id="s1" class="step slide" data-x="510" data-y="-400">
+				<q>تعديل محذاة نص</q>
+				<textarea id="textarea" style="font-size: 1em" rows="8" cols="40"></textarea>
+				<button id="dodir" style="font-size: 1em">عدل</button>
+			</div>
+			<div id="s2" class="step slide" data-x="-510" data-y="-400">
+				<h1>قريباً</h1>
+			</div>
+			<div id="s3" class="step slide" data-x="510" data-y="400">
+				<h1>قريباً</h1>
+			</div>
+			<div id="s3" class="step slide" data-x="-510" data-y="400">
+				<h1>قريباً</h1>
+			</div>
+			<div id="overview" class="step" data-scale="2.2"></div>
+
+		</div>
+
+		<div class="hint">
+			<p>
+				استخدم المسافة، الأسهم، أو زر Tab للتنقل.
+			</p>
+		</div>
+		<script src="js/impress.js"></script>
+		<script src="js/DirectionAPI.js"></script>
+		<script>
+			impress().init();
+			if ("ontouchstart" in document.documentElement) {
+				document.querySelector(".hint").innerHTML = "<p>ألمس على اليمين أو اليسار للتنقل</p>";
+			}
+			
+			var dodir = document.getElementById('dodir');
+			var textarea = document.getElementById('textarea');
+			dodir.onclick = function(event){
+				Direction.dirElem(textarea);
+			}
+		</script>
+	</body>
+</html>
